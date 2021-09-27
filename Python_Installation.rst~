@@ -10,7 +10,7 @@ Windows
 * Navigating the Command-Line Interface
     * Your command prompt is (sort of) like a text-only version of the file explorer. You can navigate from your current folder to another using ``cd folder_name`` where folder_name is replaced with the name of the folder you're going to. To leave the folder you're in currently, use '..' as folder_name. e.g:
 
-        .. code:: batch
+        .. code:: bash
 
             cd C:\Users\Matthew
             mkdir Programming
