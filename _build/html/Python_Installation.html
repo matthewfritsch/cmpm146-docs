@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Python On Command-Line Installation &#8212; cmpm146-docs  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to cmpm146-docs’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="python-on-command-line-installation">
+<h1>Python On Command-Line Installation<a class="headerlink" href="#python-on-command-line-installation" title="Permalink to this headline">¶</a></h1>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="simple">
+<dt>Installing Python3</dt><dd><ul class="simple">
+<li><p>Open a command prompt and type <code class="docutils literal notranslate"><span class="pre">python3</span></code></p></li>
+<li><p>Once it opens the Microsoft Store, install Python 3.9</p></li>
+<li><p>After this completes, retype <code class="docutils literal notranslate"><span class="pre">python3</span></code> in the command prompt. It should run the interactive environment, which you can exit by typing <code class="docutils literal notranslate"><span class="pre">exit()</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Navigating the Command-Line Interface</dt><dd><ul>
+<li><p>Your command prompt is (sort of) like a text-only version of the file explorer. You can navigate from your current folder to another using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">folder_name</span></code> where folder_name is replaced with the name of the folder you’re going to. To leave the folder you’re in currently, use ‘..’ as folder_name. e.g:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> C:<span class="se">\U</span>sers<span class="se">\M</span>atthew
+mkdir Programming
+<span class="nb">cd</span> Programming
+</pre></div>
+</div>
+<p>This will change the command prompt to the folder “C:UsersMatthew”, and create the folder “Programming” and then enter it. You may want to create a folder called “CMPM146” inside of the Programming folder.</p>
+</div></blockquote>
+</li>
+<li><p>Once you’re in the right place, it’s time to get the project files in your folder.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Download the P1 folder from Canvas</dt><dd><ul class="simple">
+<li><p>Under ‘Files’, you will see “CM146 Syllabus Fall 2021.pdf”, and “P1”. Instead of entering P1, just click on the three vertical dots on the far right side and click “Download”. This will download the project as a .zip, and you can drop the contents into your C:Users&lt;your name&gt;Programming...P1 folder.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Testing the code</dt><dd><ul class="simple">
+<li><p>In your command prompt, you can type <code class="docutils literal notranslate"><span class="pre">dir</span></code> to make sure you now see the project files. If you don’t, you may need to use <code class="docutils literal notranslate"><span class="pre">cd</span></code> to get into the right directory.</p></li>
+<li><p>Once you’re certain that the command prompt is in the right place, try <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">src\nm_interactive.py</span></code>. If it works correctly, you will see a line printed starting with “usage: ” which means that everything works, but the program was executed incorrectly.</p></li>
+<li><p>To run the program correctly, try <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">src\nm_interactive.py</span> <span class="pre">input\homer.gif</span> <span class="pre">input\homer.gif.mesh.pickle</span> <span class="pre">2</span></code>, which should open a little “tk” visual of the homer gif.</p></li>
+<li><p>Also attempt to run <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">src\nm_meshbuilder.py</span> <span class="pre">input\homer.png</span></code>. It should result in an error along the lines of “ModuleNotFound: matplotlib”. To fix this, type <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">matplotlib</span></code>, which will install the correct libraries, and then try running meshbuilder again.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Editing the code</dt><dd><ul class="simple">
+<li><p>If you have Visual Studio Code installed, you can type <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">src</span></code> which will start Visual Studio Code in the src folder. If you’re using another program, you may be able to try running it from the command line, but your mileage may vary.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Final notes</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>The benefits of running all of this in the command line are</dt><dd><ul>
+<li><p>Easier to follow what Alex is doing in the end-of-class tutorials</p></li>
+<li><p>Easier to run different python commands with new arguments (you can easily change around what input file you’re using, etc)</p></li>
+<li><p>You look like a hacker B)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="macos">
+<h2>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="simple">
+<dt>Installing Python3</dt><dd><ul class="simple">
+<li><p>Open the terminal and type <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">--version</span></code></p></li>
+<li><p>If you get an error message, go to <a class="reference external" href="https://python.org">https://python.org</a> and Download Python 3.9 for MacOS there.</p></li>
+<li><p>After this completes, retype <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">--version</span></code> in the terminal. It should state your working Python version.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Navigating the Terminal Interface</dt><dd><ul>
+<li><p>Your terminal is (sort of) like a text-only version of Finder. You can navigate from your current folder to another using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">folder_name</span></code> where folder_name is replaced with the name of the folder you’re going to. To leave the folder you’re in currently, use ‘..’ as folder_name. e.g:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+ls
+mkdir test_folder
+ls
+<span class="nb">cd</span> test_folder
+ls
+<span class="nb">pwd</span>
+<span class="nb">cd</span> ..
+rmdir test_folder
+ls
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pwd</span></code> will state what your current directory is. <code class="docutils literal notranslate"><span class="pre">ls</span></code> will tell you all the files in your current folder. <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">&lt;x&gt;</span></code> will create a new directory with the name specified as &lt;x&gt;. The order of commands are:
+* tell me where I am
+* tell me what I can see
+* make a folder called “test_folder”
+* tell me what I can see (hopefully we can now see “test_folder”)
+* go into test_folder
+* tell me what I see
+* tell me where I am
+* take me out of the test_folder
+* delete test_folder
+* and now tell me what I see one final time.</p>
+</div></blockquote>
+</li>
+<li><p>Now that you have a bit of an idea how the terminal works, make a folder called “CMPM146” and go into it.</p></li>
+<li><p>Once you’re in the right place, it’s time to get the project files in your folder.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Download the P1 folder from Canvas</dt><dd><ul class="simple">
+<li><p>Under ‘Files’, you will see “CM146 Syllabus Fall 2021.pdf”, and “P1”. Instead of entering P1, just click on the three vertical dots on the far right side and click “Download”. This will download the project as a .zip, and you can drop the contents into your CMPM146 folder.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Testing the code</dt><dd><ul class="simple">
+<li><p>In your command prompt, you can type <code class="docutils literal notranslate"><span class="pre">ls</span></code> to make sure you now see the project files. If you don’t, you may need to use <code class="docutils literal notranslate"><span class="pre">cd</span></code> to get into the right directory.</p></li>
+<li><p>Once you’re certain that the command prompt is in the right place, try <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">src/nm_interactive.py</span></code>. If it works correctly, you will see a line printed starting with “usage: ” which means that everything works, but the program was executed incorrectly.</p></li>
+<li><p>To run the program correctly, try <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">src/nm_interactive.py</span> <span class="pre">input/homer.gif</span> <span class="pre">input/homer.gif.mesh.pickle</span> <span class="pre">2</span></code>, which should open a little “tk” visual of the homer gif.</p></li>
+<li><p>If you don’t see the tk visual, and instead see “ModuleNotFound: tkinter”, then try <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">tk</span></code> and then try again.</p></li>
+<li><p>Also attempt to run <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">src\nm_meshbuilder.py</span> <span class="pre">input\homer.png</span></code>. It should result in an error along the lines of “ModuleNotFound: matplotlib”. To fix this, type <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">matplotlib</span></code>, which will install the correct libraries, and then try running meshbuilder again.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Editing the code</dt><dd><ul class="simple">
+<li><p>If you have Visual Studio Code installed, you can type <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">src</span></code> which will start Visual Studio Code in the src folder. If you’re using another program, you may be able to try running it from the command line, but your mileage may vary.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Final notes</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>The benefits of running all of this in the command line are</dt><dd><ul>
+<li><p>Easier to follow what Alex is doing in the end-of-class tutorials</p></li>
+<li><p>Easier to run different python commands with new arguments (you can easily change around what input file you’re using, etc)</p></li>
+<li><p>You look like a hacker B)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">cmpm146-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python On Command-Line Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macos">MacOS</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to cmpm146-docs’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Matthew Fritsch.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Python_Installation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
